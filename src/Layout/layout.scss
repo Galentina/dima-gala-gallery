@@ -1,0 +1,99 @@
+@import "src/styles/global";
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+  color: #00314b;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  > :last-child {
+    margin-top: auto;
+  }
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  padding: 24px;
+
+  &__title {
+    color: #9d0000;
+    margin: 16px auto;
+    font-size: calc(12px + 2vmin);
+    font-weight: bold;
+  }
+
+  &__sub-title {
+    color: #00314b;
+  }
+
+  &__albums-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__arrow {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 2px solid #00314b70;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+  }
+
+  &__albums {
+    position: relative;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  &__album {
+    margin: 0 8px 16px;
+    border-bottom: 1px solid #282c34;
+    text-align: center;
+  }
+  ul {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+.footer {
+  margin: auto 0 0;
+  font-size: calc(6px + 1vmin);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+}
+
+.selected {
+  color: #ffc0c0;
+  border-bottom: 1px solid red;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
