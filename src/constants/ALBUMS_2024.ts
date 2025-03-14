@@ -67,4 +67,34 @@ export const ALBUMS_2024 = [
     cover: albumCover('2024', 'bath-2024', 86),
     images: fileNames({ album: 'bath-2024', n: 95, type: 'jpg', year: '2024' }),
   },
+  {
+    id: 'nice',
+    name: 'Nice - 2024',
+    cover: albumCover('2024', 'nice', 6),
+    images: fileNames({ album: 'nice', n: 65, type: 'jpg', year: '2024' }),
+  },
+  {
+    id: 'paris-2024',
+    name: 'Paris - 2024',
+    cover: albumCover('2024', 'paris-2024', 21),
+    images: fileNames({ album: 'paris-2024', n: 38, type: 'jpg', year: '2024' }),
+  },
+  {
+    id: 'safari',
+    name: 'Safari park Berkse Bergen',
+    cover: albumCover('2024', 'safari', 15),
+    images: fileNames({ album: 'safari', n: 36, type: 'jpg', year: '2024' }),
+  },
+  {
+    id: 'strasburg',
+    name: 'Strasburg',
+    cover: albumCover('2024', 'strasburg', 119),
+    images: fileNames({ album: 'strasburg', n: 157, type: 'jpg', year: '2024' }),
+  },
+  {
+    id: 'uk',
+    name: 'England',
+    cover: albumCover('2024', 'uk', 3),
+    images: fileNames({ album: 'uk', n: 65, type: 'jpg', year: '2024' }),
+  },
 ]
