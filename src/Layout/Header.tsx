@@ -11,14 +11,14 @@ import { isAlbumVisible } from '../Recoil/Atoms/isAlbumVisible'
 
 const currentAlbum = localStorage.getItem('albums')
 export const Header = () => {
-  const [current, setCurrent] = useState(currentAlbum ?? '2024')
+  const [current, setCurrent] = useState(currentAlbum ?? '2025')
   const setAlbum = useSetRecoilState(chosenAlbum)
   const [hasAlbum, setHasAlbum] = useRecoilState(isAlbumVisible)
 
   useEffect(() => {
     if (!ALL_YEARS.find(year => year.year === currentAlbum)) {
-      setCurrent('2024')
-      localStorage.setItem('albums', '2024')
+      setCurrent('2025')
+      localStorage.setItem('albums', '2025')
     }
   }, [currentAlbum])
 
