@@ -4,16 +4,16 @@ import { ALL_YEARS, YEARS_DATA } from '../constants/years'
 import { Divider, Menu } from 'antd'
 import type { MenuProps } from 'antd'
 import { AlbumsPage } from '../pages/AlbumsPage'
-import { chosenAlbum } from '../Recoil/Atoms/chosenAlbum'
-import { useRecoilState, useSetRecoilState } from 'recoil'
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa'
-import { isAlbumVisible } from '../Recoil/Atoms/isAlbumVisible'
+import { useAtom } from 'jotai'
+import { isAlbumVisible } from '../Jotai/isAlbumVisible'
+import { chosenAlbum } from '../Jotai/chosenAlbum'
 
 const currentAlbum = localStorage.getItem('albums')
 export const Header = () => {
   const [current, setCurrent] = useState(currentAlbum ?? '2025')
-  const setAlbum = useSetRecoilState(chosenAlbum)
-  const [hasAlbum, setHasAlbum] = useRecoilState(isAlbumVisible)
+  const [, setAlbum] = useAtom(chosenAlbum)
+  const [hasAlbum, setHasAlbum] = useAtom(isAlbumVisible)
 
   useEffect(() => {
     if (!ALL_YEARS.find(year => year.year === currentAlbum)) {
