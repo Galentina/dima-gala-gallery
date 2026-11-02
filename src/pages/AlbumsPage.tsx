@@ -1,14 +1,14 @@
 import React, { FC } from 'react'
 import './albumsPage.scss'
 import { ALL_YEARS } from '../constants/years'
-import { useSetRecoilState } from 'recoil'
-import { chosenAlbum, IChosenAlbum } from '../Recoil/Atoms/chosenAlbum'
-import { isAlbumVisible } from '../Recoil/Atoms/isAlbumVisible'
 import { ALL_ALBUMS } from '../constants/AllAlbumsConstant'
+import { useAtom } from 'jotai'
+import { chosenAlbum, IChosenAlbum } from '../Jotai/chosenAlbum'
+import { isAlbumVisible } from '../Jotai/isAlbumVisible'
 
 export const AlbumsPage: FC <{ albums: string }> = ({ albums }) => {
-  const setAlbum = useSetRecoilState(chosenAlbum)
-  const setHasAlbum = useSetRecoilState(isAlbumVisible)
+  const [, setAlbum] = useAtom(chosenAlbum)
+  const [, setHasAlbum] = useAtom(isAlbumVisible)
 
   const albumParent = ALL_YEARS.find(el => el.year === albums)?.parent ?? ''
   const albumData = ALL_ALBUMS.find(el => el.id === albumParent)?.albums

@@ -1,4 +1,4 @@
-import { atom } from 'recoil'
+import { atom } from 'jotai'
 
 export interface IChosenAlbum {
   id: string,
@@ -7,7 +7,5 @@ export interface IChosenAlbum {
   images: { original: string,
     thumbnail: string }[],
 }
-export const chosenAlbum = atom<IChosenAlbum | null>({
-  key: 'chosenAlbum',
-  default: null,
-})
+
+export const chosenAlbum = atom<IChosenAlbum | null>(null)

@@ -1,11 +1,11 @@
 import React, { FC } from 'react'
 import ImageGallery from 'react-image-gallery'
-import { useRecoilValue } from 'recoil'
-import { chosenAlbum } from '../Recoil/Atoms/chosenAlbum'
 import { Loader } from '../components/Loader/Loading'
+import { useAtomValue } from 'jotai'
+import { chosenAlbum } from '../Jotai/chosenAlbum'
 
 export const  PageGallery: FC = () => {
-  const album = useRecoilValue(chosenAlbum)
+  const album = useAtomValue(chosenAlbum)
 
   return (
     <div>
